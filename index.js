@@ -1,5 +1,8 @@
-var $ = require("jquery");
+import $ from "jquery";
+import User from "./user.js";
 
-var name = prompt("Digite seu nome");
+const name = prompt("Digite seu nome");
 
-$("span").html(name);
+let user = new User(name);
+
+$("span").html(`${user.name}. Parabéns pelos seus ${user.age} de vida`);
